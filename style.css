@@ -7,7 +7,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif;
-    color: #1b2529;;
+    color: #1b2529;
     font-weight: 500;
 }
 
@@ -140,6 +140,12 @@ nav ul li:hover a:after {
 .ham_button{
     opacity: 0;
     transition: 1s;
+}
+.ham_button i.active {
+    color: #fff;
+}
+.over {
+    display: none;
 }
 /* 메인 */
 
@@ -521,6 +527,7 @@ nav ul li:hover a:after {
     line-height: 1.5;
     font-size: 20px;
     vertical-align: middle;
+    cursor: pointer;
 }
 .con4_wrap .slide4_wrap .prev_4 {
     left: 150px;
@@ -548,7 +555,7 @@ nav ul li:hover a:after {
 }
 .con5_wrap ul li {
     flex: 1;
-    transition: 0.5s;
+    transition: all 0.3s ;
     height: 500px;
 }
 .con5_wrap ul .con5_best {
@@ -561,7 +568,8 @@ nav ul li:hover a:after {
     background: url(img/con55-3.jpg)center center no-repeat;
 }
 .con5_wrap ul li:hover {
-    background-size: 130%;
+    /* background-size: 130%; */
+    transform: scale(1.2);
 }
 .con5_wrap ul li:not(:last-child) {
     margin-right: 40px;
@@ -572,7 +580,13 @@ nav ul li:hover a:after {
     font-size: 30px;
     font-weight: 700;
 }
+.con5_wrap ul li.con5_guest a {
+    color: #fff;
+}
 .con5_wrap .slick-arrow {
+    display: none;
+}
+.con5_wrap .slick-dots,.con5_wrap button {
     display: none;
 }
 /* footer */
@@ -642,7 +656,7 @@ input[id*=family] + label{
     border-radius: 5px;
     font-size: 14px;
     height: 13px;
-    
+    line-height: 13px;
 }
 input[id*=family] + label span{
     position: absolute;
@@ -731,7 +745,33 @@ input[id*=family]:checked + label span{
         position: absolute;
         right: 5vw;
         top: 25px;
-        
+        z-index: 10;
+    }
+    .over {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        justify-content: center;
+        align-items: center;
+        background: #00a8e3;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    .over.visible {
+        height: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+    .over ul li  {
+        margin-bottom: 30px;
+    }
+    .over ul li a {
+        color: #fff;
+        font-size: 1.5rem;
     }
     /* 컨테이너1 */
     .container1 {
@@ -830,6 +870,7 @@ input[id*=family]:checked + label span{
         height: 350px;
         position: relative;
         border-radius: 0;
+        cursor: pointer;
     }
 .con3_cate_wrap .cate_list_wrap ul li a {
     display: none;
@@ -978,14 +1019,13 @@ input[id*=family]:checked + label span{
     width: 100%;
     text-align: center;
     height: 500px; */
-    width: 1000px;
+    width: 100vw;
     overflow: hidden;
 }
 .con5_wrap ul li {
     /* flex: 1;
     transition: 0.5s; */
     flex: none;
-    width: 600px;
 }
 .con5_bene  {
     width: 600px;
@@ -1000,7 +1040,7 @@ input[id*=family]:checked + label span{
     background: url(img/con55-3.jpg)center center no-repeat;
 }
 .con5_wrap ul li:hover {
-    background-size: auto;
+    transform: none;
 }
 .con5_wrap ul li:not(:last-child) {
     margin-right: 0px;
@@ -1041,11 +1081,11 @@ footer .foot_wrap {
 }
 .foot_top h2 {
     width: 50%;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .foot_top .foot_nav {
     position: absolute;
-    bottom: -50px;
+    bottom: -100px;
     left: 0;
 }
 .foot_top .foot_nav ul{
@@ -1064,6 +1104,7 @@ footer .family_site{
     width: 50%;
 }
 .foot_bottom {
+    margin-top: 100px;
     padding: 10px 0;
     text-align: left;
 }

@@ -12,16 +12,14 @@ $(function(){
     });
 });
 
-// // 햄버거 버튼
-// $(function(){
-//     $('.ham_button').on('click', function(event){
-//         event.preventDefault();
-
-//         $(this).toggleClass('active');
-//         $('.ham_menu').toggleClass('visible');
-//     });
-// });
-
+// 햄버거버튼 메뉴 
+$(function(){
+    $('.ham_button').click(function(ev){
+        ev.preventDefault()
+        $('.ham_button i').toggleClass('active');
+        $('.over').toggleClass('visible');
+    })
+});
 
 //컨테이너1 슬라이드
 
