@@ -14,8 +14,8 @@ $(function(){
 
 // 햄버거버튼 메뉴 
 $(function(){
-    $('.ham_button').click(function(ev){
-        ev.preventDefault()
+    $('.ham_button').click(function(){
+        // ev.preventDefault()
         $('.ham_button i').toggleClass('active');
         $('.over').toggleClass('visible');
     })
