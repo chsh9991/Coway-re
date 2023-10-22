@@ -557,6 +557,7 @@ nav ul li:hover a:after {
     flex: 1;
     transition: all 0.3s ;
     height: 500px;
+    cursor: pointer;
 }
 .con5_wrap ul .con5_best {
     background: url(img/con55-1.jpg) center center no-repeat;
