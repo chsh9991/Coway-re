@@ -559,18 +559,20 @@ nav ul li:hover a:after {
     height: 500px;
     cursor: pointer;
 }
-.con5_wrap ul .con5_best {
-    background: url(img/con55-1.jpg) center center no-repeat;
+.con5_wrap ul .con5_best a {
+    background: url(img/con55-1.jpg)center no-repeat;
+    background-size: 100%;
 }
-.con5_wrap ul .con5_bene {
-    background: url(img/con55-2.jpg)center center no-repeat;
+.con5_wrap ul .con5_bene a {
+    background: url(img/con55-2.jpg)center no-repeat;
+    background-size: 100%;
 }
-.con5_wrap ul .con5_guest {
-    background: url(img/con55-3.jpg)center center no-repeat;
+.con5_wrap ul .con5_guest a {
+    background: url(img/con55-3.jpg)center no-repeat;
+    background-size: 100%;
 }
-.con5_wrap ul li:hover {
-    /* background-size: 130%; */
-    transform: scale(1.2);
+.con5_wrap ul li:hover a {
+    background-size: 110%;
 }
 .con5_wrap ul li:not(:last-child) {
     margin-right: 40px;
@@ -580,6 +582,9 @@ nav ul li:hover a:after {
     margin-top: 20px;
     font-size: 30px;
     font-weight: 700;
+    width: 520px;
+    height: 500px;
+    transition: background-size .3s ease;
 }
 .con5_wrap ul li.con5_guest a {
     color: #fff;
